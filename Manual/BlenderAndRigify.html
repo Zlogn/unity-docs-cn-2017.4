@@ -1,0 +1,344 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Using Blender and Rigify - Unity Manual">
+<title>Using Blender and Rigify - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2017.4/uploads/Main/Rigify01.png">
+<meta name="description" content="Blender now comes with a free add-on called Rigify that provides your models with a biped rig that will work with Mecanim. This will prove very useful for new and casual game developers.">
+<meta property="og:description" content="Blender now comes with a free add-on called Rigify that provides your models with a biped rig that will work with Mecanim. This will prove very useful for new and casual game developers.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'BlenderAndRigify';
+      if(!page) page = 'index';
+      var version = '2017.4';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2017.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BlenderAndRigify.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BlenderAndRigify.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BlenderAndRigify.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BlenderAndRigify.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BlenderAndRigify.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BlenderAndRigify.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BlenderAndRigify.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BlenderAndRigify.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BlenderAndRigify.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BlenderAndRigify.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2017.4/Documentation/Manual/BlenderAndRigify.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2017.4/Manual/BlenderAndRigify.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2017.4/Manual/BlenderAndRigify.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2017.4/Manual/BlenderAndRigify.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2017.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/BlenderAndRigify.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/BlenderAndRigify.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/BlenderAndRigify.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/BlenderAndRigify.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/BlenderAndRigify.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/BlenderAndRigify.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/BlenderAndRigify.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/BlenderAndRigify.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/BlenderAndRigify.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/BlenderAndRigify.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2017.4)</a></li>
+<li><a href="AnimationSection.html">动画</a></li>
+<li>Animation HOWTOs</li>
+<li>Using Blender and Rigify</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MecanimFAQ.html"></a></span><div class="tip">动画常见问题解答</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Playables.html"></a></span><div class="tip">Playables API</div>
+</div>
+</div></div>
+<h1>Using Blender and Rigify</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Blender now comes with a free add-on called Rigify that provides your models with a biped rig that will work with Mecanim. This will prove very useful for new and casual game developers.</p>
+
+<p>This guide shows you how to get your 3D model rigged with Rigify and imported into Unity’s Mecanim. Rigify generates a full rig for your model and by using the armature as a template you will be able to forge it into a nice simple rig for humanoid characters. You should start by enabling Rigify within Blender so you can use its features. From there you will import your 3d model and begin to set up your model and armature correctly to avoid any problems later down the line. Once everything is set-up you can position the bones and generate your main rig. The trickiest part is skinning the mesh to the bones you wish to use and ensuring they are parented correctly, and finally (after some testing and polishing) you can import into it into Unity.</p>
+
+<h2>Here is what you will need:</h2>
+<!-- notrans -->
+
+<ul>
+<li><a href="http://unity3d.com/unity/download/">Unity</a></li>
+<li>
+<a href="http://www.blender.org/download/get-blender/">Blender</a>
+<!-- /notrans -->
+</li>
+<li>3D Humanoid Model (<a href="http://www.makehuman.org/">MakeHuman</a> is very useful if you need help with modelling).</li>
+</ul>
+
+<h2>Enable Rigify</h2>
+
+<p>First you need to ensure that the Rigify add-on has been installed and enabled within Blender:</p>
+
+<ol>
+<li>Go to File &gt; User preferences.</li>
+<li>Select the Addons tab, and then scroll to the bottom and click the check box next to “Rigify”</li>
+<li>Click “Save User Settings”</li>
+</ol>
+
+<p>This activates the add-on and allows you access to the buttons and features needed. Setting it to default will include it with all your future projects.</p>
+
+<h2>Setting up your Armature</h2>
+
+<p>Grab a basic humanoid rig that Rigify will use as a template. This rig is very basic but it allows Rigify to build itself around the relative bone positions.</p>
+
+<ol>
+<li><p>Add Human Armeture: Go to Add <em>(SHIFT + A)</em> &gt; Armature (Human) </p></li>
+<li><p>Ensure both the armature and model are centred at 0,0,0</p></li>
+<li>
+<p>If you scale or move the model make sure to reset the scale and/or translation values of both the armature and model.</p>
+
+<figure>
+<img src="../uploads/Main/Rigify01.png" alt="">
+</figure>
+</li>
+<li>
+<p>Go into edit mode (Press Tab)</p>
+
+<figure>
+<img src="../uploads/Main/Rigify02.png" alt="">
+</figure>
+</li>
+<li><p>Begin positioning the bones in their respective place on the model</p></li>
+<li><p>Use “X-Ray” to allow yourself to see the bones through the model</p></li>
+<li><p>Once this is complete, go back into object mode.</p></li>
+<li><p>Move the armature to the side so it is out of the way.
+<em>(If you are using Make Human, you may want to join the many different meshes into one complete mesh. Do this by selecting all the meshes and pressing CTRL + J)</em></p></li>
+</ol>
+
+<h2>Generating your Rig</h2>
+
+<ol>
+<li><p>While the armature is selected click the Object data tab on the far right.</p></li>
+<li>
+<p>Under “Rigify Buttons” click Generate.</p>
+
+<figure>
+<img src="../uploads/Main/Rigify03.png" alt="">
+</figure>
+</li>
+<li>
+<p>Switch to Pose mode and do the following:</p>
+
+<figure>
+<img src="../uploads/Main/Rigify04.png" alt="">
+</figure>
+</li>
+<li><p>Press the (A) key to select the rig and then press the (H) key to hide the unwanted layers.</p></li>
+<li>
+<p>Shift click on the Armature layer below.</p>
+
+<figure>
+<img src="../uploads/Main/Rigify05.png" alt="">
+</figure>
+</li>
+</ol>
+
+<p>This will reveal the deformation bones, the deformation bones are what you will need to skin and weight paint your mesh to.</p>
+
+<p><em>If all deformation bones do not appear check the “Auto Run Python Scripts” option under File &gt; User Preferences&gt;File and re-generate</em></p>
+
+<h2>Deleting WGT bones</h2>
+
+<p>You will notice in the top right corner in the scene’s hierarchy you have many WGT-bones <em>(WGT stands for Widget)</em>.</p>
+
+<figure>
+<img src="../uploads/Main/RigifyWGT.png" alt="">
+</figure>
+
+<p>As these bones will not be skinned to the mesh or used at all, we will need to delete them to avoid having unassigned meshes in our Unity project. Right click on the bone and select “Delete”. Do this for each WGT-bone in the scene.</p>
+
+<h2>Skinning the Rig to the Model</h2>
+
+<ol>
+<li>
+<p>Skin the model to the deformation bones.</p>
+
+<figure>
+<img src="../uploads/Main/Rigify06.png" alt="">
+</figure>
+
+<p>Before you start, make sure you are in object mode and select the mesh, then hold shift and select the rig, press Ctrl + P and select Armature deform &gt; With Automatic weights.
+ This will assign the mesh to the bones creating vertex groups, this is what we will use for the skinning process.
+ <em>(If you have little or no knowledge of skinning in blender take a look at the <a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=PPbSGUPj72w#t=410s">tutorial</a>.)</em>
+ Note that the deformation bones will use two bones for each of the upper and lower limbs. Do not skin to the 2nd bone and ensure they are re-parented so that Mecanim will link them up correctly.</p>
+</li>
+<li><p>Skin your Shoulders to “DEF-shoulder.R” + “DEF-shoulder.L” and ensure their parent is “ORG-ribs”</p></li>
+<li><p>Skin your Upper arms to “DEF-upper_arm.R.01” + “DEF-upper_arm.L.01” and ensure their parent is “DEF-shoulder.R” or “DEF-shoulder.L” respectively.</p></li>
+<li><p>Skin your Forearms to “DEF-forearm.R.01” + “DEF-forearm.L.01” and ensure their parent is “DEF-upper_arm.R.01” or “DEF-upper_arm.L.01” respectively.</p></li>
+<li><p>Skin your thighs to DEF-thigh.R.01 + DEF-thigh.L.01 and ensure their parent bone is “ORG-hips”.</p></li>
+<li>
+<p>Skin your Shins to DEF-shin.R.01 + DEF-shin.L.01 and ensure their parent is “DEF-thigh.R.01” or “DEF-thigh.L.01” respectively.
+ This will provide you with a rig that is skinned to the bones shown without an X through them. The spare bones should not be skinned to anything!</p>
+
+<figure>
+<img src="../uploads/Main/Rigify07.png" alt="">
+</figure>
+
+<p>Do the same thing to the hands, just remember Mecanim will only take the hand bone and three bones for each finger and thumb. This means you skin the model’s hands to the bones without crosses through them as shown in the picture below.</p>
+
+<figure>
+<img src="../uploads/Main/Rigify08.png" alt="">
+</figure>
+</li>
+<li><p>In the same way the hand must be parented to the correct bones. Skin your Hands to “DEF-hand.R” + “DEF-hand.L” and ensure their parent is “DEF-forearm.R.01” or “DEF-forearm.L.01” respectively.</p></li>
+</ol>
+
+<p>For each finger and thumb you will be using the following (left hand as an example):</p>
+
+<pre><code>* Thumb: "DEF-thumb.01.L.02", "DEF-thumb.02.L", "DEF-thumb.03.L"
+* Index: "DEF-finger_index.01.L.02", "DEF-finger_index.02.L", "DEF-finger_index.03.L"
+* Middle: "DEF-finger_middle.01.L.02", "DEF-finger_middle.02.L", "DEF-finger_middle.03.L"
+* Ring: "DEF-finger_ring.01.L.02", "DEF-finger_ring.02.L", "DEF-finger_ring.03.L"
+* Pinky: "DEF-finger_pinky.01.L.02", "DEF-finger_pinky.02.L", "DEF-finger_pinky.03.L"
+</code></pre>
+
+<p>Remember that each finger bone should always be parented to the last and the first bone should be parented to the hand, providing a neat link for Mecanim to deal with.</p>
+
+<h2>Export and Import</h2>
+
+<p>Export the model as a .fbx and place it in a folder separate from your project. file &gt; Export &gt; AutoDesk FBX (.fbx) &gt; Export. Once this is done you can begin to import it into Unity and get it linked up to Mecanim.</p>
+
+<ol>
+<li>
+<p>Open Unity and create a new project called “Rigify Test” once it is open, simply drag and drop your model into the project window.</p>
+
+<figure>
+<img src="../uploads/Main/Rigify09.png" alt="">
+</figure>
+</li>
+<li>
+<p>Select the model’s prefab in the project window and click Rig in the inspector. Change Animation Type to Humanoid and click Configure.</p>
+
+<p>All the bones should now link up nicely into Mecanim.</p>
+
+<figure>
+<img src="../uploads/Main/Rigify10.png" alt="">
+</figure>
+</li>
+<li>
+<p>Ensure all bones are in the right places and that there are no errors.</p>
+
+<figure>
+<img src="../uploads/Main/Rigify11.png" alt="">
+</figure>
+</li>
+</ol>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="MecanimFAQ.html"></a></span><div class="tip">动画常见问题解答</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Playables.html"></a></span><div class="tip">Playables API</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2017.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

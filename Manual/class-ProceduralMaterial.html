@@ -1,0 +1,289 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Procedural Material Assets - Unity Manual">
+<title>Procedural Material Assets - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2017.4/uploads/Main/Inspector-ProceduralMaterial1.png">
+<meta name="description" content="Procedural Material Assets are textures that are generated for you at run-time. See Procedural Materials in the User Guide for more information.
+A Procedural Material asset can contain one or more procedural materials.
+These can be viewed in the Inspector just like regular materials. Note however that often procedural materials have many tweakable parameters. As with Material assets the Inspector shows a preview of the Procedural Material at the bottom of the window.">
+<meta property="og:description" content="Procedural Material Assets are textures that are generated for you at run-time. See Procedural Materials in the User Guide for more information.
+A Procedural Material asset can contain one or more procedural materials.
+These can be viewed in the Inspector just like regular materials. Note however that often procedural materials have many tweakable parameters. As with Material assets the Inspector shows a preview of the Procedural Material at the bottom of the window.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'class-ProceduralMaterial';
+      if(!page) page = 'index';
+      var version = '2017.4';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2017.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-ProceduralMaterial.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-ProceduralMaterial.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-ProceduralMaterial.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-ProceduralMaterial.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-ProceduralMaterial.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-ProceduralMaterial.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-ProceduralMaterial.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-ProceduralMaterial.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-ProceduralMaterial.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-ProceduralMaterial.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2017.4/Documentation/Manual/class-ProceduralMaterial.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2017.4/Manual/class-ProceduralMaterial.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2017.4/Manual/class-ProceduralMaterial.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2017.4/Manual/class-ProceduralMaterial.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2017.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/class-ProceduralMaterial.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/class-ProceduralMaterial.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/class-ProceduralMaterial.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/class-ProceduralMaterial.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/class-ProceduralMaterial.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/class-ProceduralMaterial.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/class-ProceduralMaterial.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/class-ProceduralMaterial.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/class-ProceduralMaterial.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/class-ProceduralMaterial.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2017.4)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsReference.html">图形参考</a></li>
+<li><a href="comp-Textures.html">纹理组件</a></li>
+<li>Procedural Material Assets</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-TextureImporterOverride.html"></a></span><div class="tip">特定于平台的覆盖的纹理压缩格式</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-RenderTexture.html"></a></span><div class="tip">渲染纹理</div>
+</div>
+</div></div>
+<h1>Procedural Material Assets</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Procedural Material Assets are textures that are generated for you at run-time. See <a href="ProceduralMaterials.html">Procedural Materials</a> in the User Guide for more information.
+A Procedural Material asset can contain one or more procedural materials.
+These can be viewed in the Inspector just like regular materials. Note however that often procedural materials have many tweakable parameters. As with Material assets the Inspector shows a preview of the Procedural Material at the bottom of the window.</p>
+
+<figure>
+<img src="../uploads/Main/Inspector-ProceduralMaterial1.png" alt="A Procedural Material viewed in the Inspector.">
+<figcaption>A Procedural Material viewed in the Inspector.</figcaption>
+</figure>
+
+<p>The Inspector window has 4 main panes.</p>
+
+<ol>
+<li>Substance Archive Manager.</li>
+<li>Properties.</li>
+<li>Generated Textures.</li>
+<li>Preview.</li>
+</ol>
+
+<h2>Substance Archive Manager</h2>
+
+<p>The archive view shows you all the procedural materials that the Procedural Material asset contains.
+Select the procedural material you are interested in from the row of previews. Procedural Materials can be Added and Deleted to the Procedural Material Asset archive using the plus and minus buttons.
+Adding a procedural material will create a new material using the prototype encoded in the archive.
+The third, Duplicate button will create a new procedural material that is a copy of the currently selected one, including all its settings. Procedural materials can be renamed by typing in a new name in the material header name field.</p>
+
+<h2>属性</h2>
+
+<h3>Material Properties</h3>
+
+<p>These are the regular properties of the material, which are dependent on which shader is chosen.
+They work the same as for regular materials.</p>
+
+<h3>Procedural Properties</h3>
+
+<p>The properties of any Procedural Material will change according to how the procedural material was created.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Generate at Load</strong></td>
+	<td style="text-align:left;">Generate the substance when the scene loads. If disabled, it will only be generated when prompted from scripting.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Random Seed</strong></td>
+	<td style="text-align:left;">Procedural materials often need some randomness. The Random Seed can be used to vary the generated appearance. Often this will be zero. Just click the Randomize button to get a different seed and observe how the material changes.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Generated Textures</h2>
+
+<figure>
+<img src="../uploads/Main/Inspector-ProceduralMaterial2.png" alt="The Generated Textures pane.">
+<figcaption>The Generated Textures pane.</figcaption>
+</figure>
+
+<p>This area allows you to visualize textures that the procedural material generates.
+The dropdown below each of the generated textures allows you to choose which texture map should supply the alpha channel for that texture. You could, for example, specify that the base alpha comes from the Transparency image, or from the Specular image. The screen-shot below shows the base alpha channel coming from the Specular image.</p>
+
+<h3>Per-Platform Overrides</h3>
+
+<p>When you are building for different platforms, you have to think on the resolution of your textures for the target platform, the size and the quality. You can override these options and assign specific values depending on the platform you are deploying to. Note that if you don’t select any value to override, the Editor will pick the default values when building your project.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong><em>属性：</em></strong></th>
+	<th style="text-align:left;"><strong><em>功能：</em></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Target Size</strong></td>
+	<td style="text-align:left;">The targeted size of the generated textures. Most procedural textures are designed to be resolution independent and will respect the chosen target size, but in rare cases they will use a fixed size instead, or have the possible sizes limited to within a certain range. The actual size of the generated textures can be read in the preview at the bottom of the Inspector.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>纹理格式</strong></td>
+	<td style="text-align:left;">What internal representation is used for the texture in memory, once it is generated. This is a tradeoff between size and quality:</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>Compressed</strong>
+</td>
+	<td style="text-align:left;">Compressed RGB texture. This will result in considerably less memory used.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">        <strong>RAW</strong>
+</td>
+	<td style="text-align:left;">Uncompressed truecolor, this is the highest quality. At 256 KB for a 256x256 texture.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Preview</h2>
+
+<p>The procedural material preview operates in an identical manner to the material preview.
+However, unlike the regular material preview it shows the pixel dimensions of the generated textures.</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-TextureImporterOverride.html"></a></span><div class="tip">特定于平台的覆盖的纹理压缩格式</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-RenderTexture.html"></a></span><div class="tip">渲染纹理</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2017.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

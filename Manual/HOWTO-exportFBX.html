@@ -1,0 +1,250 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="FBX export guide - Unity Manual">
+<title>FBX export guide - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2017.4/uploads/Main/FBX_A.png">
+<meta name="description" content="Unity supports FBX files which can be generated from many popular 3D applications. Use these guidelines to help ensure the best results.">
+<meta property="og:description" content="Unity supports FBX files which can be generated from many popular 3D applications. Use these guidelines to help ensure the best results.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'HOWTO-exportFBX';
+      if(!page) page = 'index';
+      var version = '2017.4';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2017.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/HOWTO-exportFBX.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/HOWTO-exportFBX.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/HOWTO-exportFBX.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/HOWTO-exportFBX.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/HOWTO-exportFBX.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/HOWTO-exportFBX.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/HOWTO-exportFBX.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/HOWTO-exportFBX.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/HOWTO-exportFBX.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/HOWTO-exportFBX.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2017.4/Documentation/Manual/HOWTO-exportFBX.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2017.4/Manual/HOWTO-exportFBX.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2017.4/Manual/HOWTO-exportFBX.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2017.4/Manual/HOWTO-exportFBX.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2017.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/HOWTO-exportFBX.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/HOWTO-exportFBX.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/HOWTO-exportFBX.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/HOWTO-exportFBX.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/HOWTO-exportFBX.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/HOWTO-exportFBX.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/HOWTO-exportFBX.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/HOWTO-exportFBX.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/HOWTO-exportFBX.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/HOWTO-exportFBX.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2017.4)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsHowTos.html">图形操作方法</a></li>
+<li><a href="HOWTO-importObject.html">How do I import models from my 3D app?</a></li>
+<li>FBX export guide</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-importObject.html"></a></span><div class="tip">How do I import models from my 3D app?</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-ImportObjectMaya.html"></a></span><div class="tip">Importing objects from Maya</div>
+</div>
+</div></div>
+<h1>FBX export guide</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity supports FBX files which can be generated from many popular 3D applications. Use these guidelines to help ensure the best results.</p>
+
+<p><strong>Select &gt; Prepare &gt; Check Settings &gt; Export &gt; Verify &gt; Import</strong></p>
+
+<h3>
+<strong>What</strong> do you want to export?</h3>
+
+<p>Be aware of export scope e.g. meshes, cameras, lights, animation rigs, etc.</p>
+
+<ul>
+<li>Applications often let you export <strong>selected objects</strong> or a <strong>whole scene</strong>
+</li>
+<li>Make sure you are exporting only the objects you want to use from your scene by either exporting selected, or removing unwanted data from your scene.</li>
+<li>Good working practice often means keeping a working file with all lights, guides, control rigs etc. but only export the data you need with <em>export selected,</em> an export preset or even a custom scene exporter.</li>
+</ul>
+
+<h3>
+<strong>What</strong> do you need to include?</h3>
+
+<p>Prepare your assets:</p>
+
+<ul>
+<li>Meshes - Remove construction history, Nurbs, Nurms, Subdiv surfaces must be converted to polygons - e.g. triangulate or quadrangulate</li>
+<li>Animation - Select the correct rig, check frame rate, animation length etc.</li>
+<li>Blend Shapes / Morphing - Make sure your Blendshapes (Maya) or Morph targets (Max) are assigned / set up the export mesh appropriately</li>
+<li>Textures - Make sure your textures are sourced already from your Unity project or copied into a folder called \textures in your project</li>
+<li>Smoothing - Check if you want smoothing groups and/or smooth mesh</li>
+</ul>
+
+<h3>
+<strong>How</strong> do I include those elements?</h3>
+
+<p>Check the FBX export settings</p>
+
+<ul>
+<li>Be aware of your settings in the export dialogue so that you know what to expect and can match up the FBX settings In Unity - see figs 1, 2 &amp; 3 below</li>
+<li>Check Animation / Deformations / Skins / Morphs as appropriate</li>
+<li>Nodes, markers and their transforms can be exported</li>
+<li>Cameras and Lights are not currently imported in to Unity</li>
+</ul>
+
+<h3>
+<strong>Which</strong> version of FBX are you using?</h3>
+
+<p>Use the <a href="http://usa.autodesk.com/adsk/servlet/pc/item?siteID=123112&amp;id=10775855">Latest Version of FBX</a> where possible. </p>
+
+<ul>
+<li><p>Autodesk update their FBX installer regularly and it can provide different results with different versions of their own software and other 3rd party 3D apps</p></li>
+<li><p><strong>See Advanced Options &gt; FBX file format</strong></p></li>
+<li><p>If you have any issues you can revert to <a href="http://usa.autodesk.com/adsk/servlet/pc/item?siteID=123112&amp;id=18817399">2012.2</a> if necessary</p></li>
+</ul>
+
+<h3>Will it work?</h3>
+
+<p>Verify your export</p>
+
+<ul>
+<li>Check your file size - do a sanity check on the file size (e.g. &gt;10kb?)</li>
+<li>Re-import your FBX into a new scene in the 3D package you use to generate it - is it what you expected?</li>
+</ul>
+
+<h3><strong>Import!</strong></h3>
+
+<ul>
+<li>Import into Unity</li>
+<li>Check FBX import settings in inspector : textures, animations, smoothing and so on.</li>
+</ul>
+
+<p>See below for Maya FBX dialogue example:</p>
+
+<figure>
+<img src="../uploads/Main/FBX_A.png" alt="General, Geometry &amp; Animation">
+<figcaption>General, Geometry &amp; Animation</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/FBX_B.png" alt="Lights, Advanced options">
+<figcaption>Lights, Advanced options</figcaption>
+</figure>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="HOWTO-importObject.html"></a></span><div class="tip">How do I import models from my 3D app?</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="HOWTO-ImportObjectMaya.html"></a></span><div class="tip">Importing objects from Maya</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2017.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

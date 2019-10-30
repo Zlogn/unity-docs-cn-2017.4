@@ -1,0 +1,295 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="渐进光照贴图 (Progressive Lightmapper) - Unity Manual">
+<title>渐进光照贴图 (Progressive Lightmapper) - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2017.4/uploads/Main/ProgressiveLightmapper-0.jpg">
+<meta name="description" content="The progressive lightmapper is a path tracing based lightmapper backend that provides baked lightmaps and light probes with progressive updates in the Editor.">
+<meta property="og:description" content="The progressive lightmapper is a path tracing based lightmapper backend that provides baked lightmaps and light probes with progressive updates in the Editor.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'ProgressiveLightmapper';
+      if(!page) page = 'index';
+      var version = '2017.4';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2017.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ProgressiveLightmapper.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ProgressiveLightmapper.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ProgressiveLightmapper.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ProgressiveLightmapper.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ProgressiveLightmapper.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ProgressiveLightmapper.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ProgressiveLightmapper.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ProgressiveLightmapper.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ProgressiveLightmapper.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ProgressiveLightmapper.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2017.4/Documentation/Manual/ProgressiveLightmapper.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2017.4/Manual/ProgressiveLightmapper.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2017.4/Manual/ProgressiveLightmapper.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2017.4/Manual/ProgressiveLightmapper.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2017.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ProgressiveLightmapper.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ProgressiveLightmapper.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ProgressiveLightmapper.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ProgressiveLightmapper.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ProgressiveLightmapper.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ProgressiveLightmapper.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ProgressiveLightmapper.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ProgressiveLightmapper.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ProgressiveLightmapper.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ProgressiveLightmapper.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2017.4)</a></li>
+<li><a href="Experimental.html">实验性</a></li>
+<li>渐进光照贴图 (Progressive Lightmapper)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIElements.html"></a></span><div class="tip">开始使用 UIElements</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Lightmapping-SeamStitching.html"></a></span><div class="tip">光照贴图接缝缝合</div>
+</div>
+</div></div>
+<h1>渐进光照贴图 (Progressive Lightmapper)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<h2>What</h2>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-0.jpg" alt="">
+</figure>
+
+<p>The progressive lightmapper is a path tracing based lightmapper backend that provides baked lightmaps and light probes with progressive updates in the Editor.</p>
+
+<p>The progressive lightmapper goes through a short prepare step (geometry and instance updates, G-buffer and chart mask generation) and starts producing the output very quickly. New lightmaps and light probes are shown as soon as a new intermediate result is ready. This allows for a very fast iteration workflow.</p>
+
+<h2>Why</h2>
+
+<p>The old Enlighten-based lightmapper for baked lightmaps relied on precomputed realtime GI to generate indirect lighting. That was both an advantage, as just changing the lighting could produce new lightmaps fairly quickly, and a disadvantage, as it imposed all the UV layout limitations even for users only interested in baking. The UV requirements in the progressive lightmapper are the usual for baked lightmapping: non-overlapping UVs with small area and angle errors, and sensible padding between the charts.</p>
+
+<p>The new lightmapper starts producing the output immediately and progressively refines it over time for a much improved lighting workflow - this means an interactive lighting workflow. Additionally, baking times are much more predictable.</p>
+
+<p>See an in-depth video showing the interactive workflow <a href="https://youtu.be/foMZJrwRGr0">here</a>.</p>
+
+<p>Moreover the new technique bakes global illumination at the lightmap resolution - for each texel individually - without upsampling schemes or relying on any irradiance caches or other global data structures. This makes it robust and allows you to bake selected portions of lightmaps, which means that iteration speed can be improved greatly.</p>
+
+<h2>Setup</h2>
+
+<p>Newly created scenes have the progressive lightmapper enabled by default. Existing scenes will stick to Enlighten until you choose the “Progressive (experimental)” Bake Backend.</p>
+
+<h3>Settings</h3>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-2.jpg" alt="">
+</figure>
+
+<ul>
+<li>
+<strong>Bake Backend</strong> - “Enlighten” is the old baking backend and “Progressive (experimental)” is the new one.</li>
+<li>
+<strong>Stationary Lighting Mode: </strong>Specifies which scene lighting mode will be used for all stationary lights in the scene. Options are Baked Indirect, Distance Shadowmask, Shadowmask and Subtractive. Currently light modes are not supported, please be sure to set ‘Baked Indirect’ and do not use ‘Stationary’ lights. The support will come soon.</li>
+<li>
+<strong>Lightmap Resolution</strong> - The amount of texels per world unit. Keep in mind that increasing this value by two, increases the amount of texels to be calculated by four. Please check the “Occupied texels” count in the stats below.</li>
+<li>
+<strong>Lightmap Padding</strong> - The padding (in texels) between different instances in the atlas. In order to change padding between UV charts inside an instance please adjust ‘Pack Margin’ on the mesh importer in the Advanced settings under ‘Generate Lightmap UVs’.</li>
+<li>
+<strong>Compress Lightmaps</strong> - Intermediate lightmaps are not compressed, but the final ones do respect the compression setting.</li>
+<li>
+<strong>Samples</strong> - The amount of samples (paths) shot from each texel. For some scenes, especially outdoor scenes, 100 samples may be enough. For indoor scenes with emissive geometry more will be needed.</li>
+<li>
+<strong>Bounces</strong> - Number of indirect bounces to do when tracing paths. For most scenes two bounces is enough. For some indoor scenarios more may be necessary.</li>
+<li>
+<strong>Filtering</strong> - Configure the post-processing of lightmaps to limit noise. It can be set to None, Auto or Advanced. The Advanced option offers three additional parameters for manual configuration. In Auto mode the default values from the Advanced mode are used.
+
+<ul>
+<li>
+<strong>Direct Radius: </strong>The radius of the Gauss filter in texels for direct light in the lightmap. A higher radius will increase the blur strength.</li>
+<li>
+<strong>Indirect Radius: </strong>The radius of the Gauss filter in texels for indirect light in the lightmap. A higher radius will increase the blur strength.</li>
+<li>
+<strong>AO Radius: </strong>The radius of the Gauss filter in texels for ambient occlusion in the lightmap. A higher radius will increase the blur strength.</li>
+</ul>
+</li>
+<li>
+<strong>Prioritize View </strong>- When enabled texels currently visible in scene view camera frustum will be prioritized. When those are done, the lightmapper will continue on all the out-of-view texels.</li>
+</ul>
+
+<h3>Stats</h3>
+
+<p>The panel below the ‘Auto Generate’ and ‘Generate Lighting’ options shows the amount of lightmaps that were created, how many are in view (converged / not converged) and out of view (converged / not converged) and the bake performance.</p>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-3.png" alt="">
+</figure>
+
+<h3>Lightmap parameters</h3>
+
+<p>In addition to the Baked GI settings in the Lighting window, there are new parameters in the Lightmap Parameters asset that can be configured. These are Anti-aliasing Samples, Pushoff and Backface Tolerance. Default lightmap parameters can be set for the scene in <em>General GI &gt; Default Parameters</em> or set per renderer.
+<img src="../uploads/Main/ProgressiveLightmapper-4.png" alt=""></p>
+
+<ul>
+<li>
+<strong>Anti-aliasing Samples </strong>- The number of times to supersample a texel to reduce aliasing. Samples [1;3] disables supersampling, samples [4;8] give 2x supersampling, and samples [9;256] give 4x supersampling. (This is a bit weird UX-wise, we’ll improve on that front.) This mostly affects the amount of memory used for the positions and normals buffers (2x uses four times the amount of memory, 4x uses 16 times the amount of memory).</li>
+<li>
+<strong>Pushoff </strong>- The amount to push off ray origins away from geometry along the normal for ray tracing, in modelling units. It is applied to all baked lightmaps, so it affects direct light, indirect light and ambient occlusion. It is useful for getting rid of unwanted occlusion/shadowing.</li>
+<li>
+<strong>Backface Tolerance </strong>- The percentage of rays shot from an output texel that must hit front faces to be considered usable. Allows a texel to be invalidated if too many of the rays cast from it hit backfaces (the texel is inside some geometry). In that case artefacts are avoided by cloning valid values from surrounding texels. For example, if backface tolerance is 0.0, the texel is rejected only if it sees nothing but backfaces. If it is 1.0, the ray origin is rejected if it has even one ray that hits a backface. In the Baked Texel Validity scene view mode one case see valid (green) and invalid (red) texels. If you have a single sided mesh in your scene, you may want to disable this feature by setting it to zero. A two-sided flag will later be added in the editor to address this.</li>
+</ul>
+
+<p>The rest is the default Unity 5 workflow. Mark your objects as static and set some light inputs (lights, environment lighting or emissive materials on static objects) as baked.</p>
+
+<p>In “Auto” mode the lightmaps and light probes will be calculated automatically. If you have “Auto” disabled you will need to press the “Build” button for the bake to start.</p>
+
+<h3>Other Features</h3>
+
+<p><strong>Force stop:</strong> Allows for stopping the bake at an arbitrary point in time, before the requested amount of samples has actually been done. It works when the lighting is built manually. With the 100,000 max sample count and the ability to disable view prioritization, one can leave the machine baking and just stop whenever the results look pleasing.<img src="../uploads/Main/ProgressiveLightmapper-5.jpg" alt=""></p>
+
+<p><strong>Invalid texels:</strong> Texels are marked as invalid based on the Backface Tolerance parameter (LightmapParameters &gt; General GI) and invalid texels are filled from the valid neighbours. The dilation process that takes care of that does more iterations once the lightmap has converged than when it’s still improving.</p>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-6.png" alt="">
+</figure>
+
+<p><strong>Supersampling:</strong> The lighting quality is influenced by the supersampling amount. Control it using the ‘Anti-aliasing Samples’ property (Lightmap Parameters &gt; Baked GI, see the Lightmap Parameters section above).</p>
+
+<h2>Example project</h2>
+
+<p>This <a href="https://drive.google.com/open?id=0BwkcjTqCXtRNaEIxeG5Bdk9FV2M">project</a> is set up with the settings needed for the progressive lightmapper. It is a version of the <a href="https://www.assetstore.unity3d.com/en/#!/content/46209">Tanks!</a> project also available on the Asset Store. It bakes in less than 5 minutes and has 11 1024x1024 lightmaps. Watch a <a href="https://youtu.be/IsdH-uOLk2c">video</a> showing the interactive workflow in this project.</p>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-8.png" alt="">
+</figure>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-9.png" alt="">
+</figure>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-10.png" alt="">
+</figure>
+
+<figure>
+<img src="../uploads/Main/ProgressiveLightmapper-11.png" alt="">
+</figure>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2017–07–04 Page published with no <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">2017–07–04 New feature in Unity 5.6 (Experimental)</span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UIElements.html"></a></span><div class="tip">开始使用 UIElements</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Lightmapping-SeamStitching.html"></a></span><div class="tip">光照贴图接缝缝合</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2017.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

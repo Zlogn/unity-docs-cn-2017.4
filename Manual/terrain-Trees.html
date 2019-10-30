@@ -1,0 +1,317 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Trees - Unity Manual">
+<title>Trees - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2017.4/uploads/Main/TerrainWithTrees.jpg">
+<meta name="description" content="To enhance Unity Terrains, you can paint Trees onto a Terrain in much the same way as painting height maps and textures. However, Trees are solid 3D GameObjects that grow from the surface. Unity uses optimisations, like billboarding for distant Trees, to maintain good rendering performance. This means that you can have dense forests with thousands of trees and still keep an acceptable frame rate.">
+<meta property="og:description" content="To enhance Unity Terrains, you can paint Trees onto a Terrain in much the same way as painting height maps and textures. However, Trees are solid 3D GameObjects that grow from the surface. Unity uses optimisations, like billboarding for distant Trees, to maintain good rendering performance. This means that you can have dense forests with thousands of trees and still keep an acceptable frame rate.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'terrain-Trees';
+      if(!page) page = 'index';
+      var version = '2017.4';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2017.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/terrain-Trees.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/terrain-Trees.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/terrain-Trees.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/terrain-Trees.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/terrain-Trees.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/terrain-Trees.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/terrain-Trees.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/terrain-Trees.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/terrain-Trees.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/terrain-Trees.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2017.4/Documentation/Manual/terrain-Trees.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2017.4/Manual/terrain-Trees.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2017.4/Manual/terrain-Trees.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2017.4/Manual/terrain-Trees.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2017.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/terrain-Trees.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/terrain-Trees.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/terrain-Trees.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/terrain-Trees.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/terrain-Trees.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/terrain-Trees.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/terrain-Trees.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/terrain-Trees.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/terrain-Trees.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/terrain-Trees.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2017.4)</a></li>
+<li><a href="Graphics.html">图形</a></li>
+<li><a href="GraphicsOverview.html">图形概述</a></li>
+<li><a href="script-Terrain.html">地形引擎</a></li>
+<li>Trees</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="terrain-Textures.html"></a></span><div class="tip">地形纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpeedTree.html"></a></span><div class="tip">SpeedTree</div>
+</div>
+</div></div>
+<h1>Trees</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>To enhance Unity Terrains, you can paint Trees onto a Terrain in much the same way as painting height maps and textures. However, Trees are solid 3D GameObjects that grow from the surface. Unity uses optimisations, like billboarding for distant Trees, to maintain good rendering performance. This means that you can have dense forests with thousands of trees and still keep an acceptable frame rate.</p>
+
+<figure>
+<img src="../uploads/Main/TerrainWithTrees.jpg" alt="Terrain with Trees">
+<figcaption>Terrain with Trees</figcaption>
+</figure>
+
+<h2>Painting Trees</h2>
+
+<p>The Tree button on the toolbar enables Tree painting:</p>
+
+<figure>
+<img src="../uploads/Main/TerrainTreePaintTool.png" alt="">
+</figure>
+
+<p>Initially, the Terrain will have no Trees available. In order to start painting onto the Terrain, you need to add a Tree. Click the <strong>Edit Trees</strong> button and select <strong>Add Tree</strong>. From here, you can select a Tree asset from your Project and add it as a <strong>Tree Prefab</strong> for use with the brush:</p>
+
+<figure>
+<img src="../uploads/Main/TerrainTreeAddWindow.png" alt="The Add Tree window">
+<figcaption>The Add Tree window</figcaption>
+</figure>
+
+<p>To help prototyping, Unity provides several sample SpeedTree Tree GameObjects in the Standard Assets package. Alternatively, you can create your own Trees.</p>
+
+<p>If the Tree GameObject that you are importing supports <strong>Bend Factor</strong> , the Add Tree window shows a <strong>Bend Factor</strong> property for adjusting wind responsiveness. Trees created using the SpeedTree Modeller have a <strong>Bend Factor</strong>. See the section on <strong>Making Trees bend in the wind </strong>below. </p>
+
+<p>When you have set up your Tree properties (described below), you can paint Trees onto the Terrain in the same way you paint textures or heightmaps. You can remove Trees from an area by holding the shift key while you paint, or remove just the currently selected Tree type by holding down the control key. </p>
+
+<h2>Tree properties</h2>
+
+<p>After you have selected which Tree to place, adjust its settings to customise Tree placement and characteristics:</p>
+
+<figure>
+<img src="../uploads/Main/TerrainTreePropertiesWindow.jpg" alt="Tree properties">
+<figcaption>Tree properties</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">属性：</th>
+	<th style="text-align:left;">功能：</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Mass Place Trees</strong></td>
+	<td style="text-align:left;">Create an overall covering of Trees without painting over the whole landscape. After mass placement, you can still use painting to add or remove Trees to create denser or sparser areas.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Brush Size</strong></td>
+	<td style="text-align:left;">Controls the size of the area that you can add Trees to.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Tree Density</strong></td>
+	<td style="text-align:left;">Tree Density controls the average number of Trees painted onto the area defined by Brush Size.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Tree Height</strong></td>
+	<td style="text-align:left;">Control the Tree’s minimal height and maximal height using a slider. Drag the slider to the left for short Trees, and right for tall Trees. If you uncheck Random, you can specify the exact scale for the height of all newly painted Trees within the range of 0.01 to 2.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lock Width to Height</strong></td>
+	<td style="text-align:left;">By default, a Tree’s width is locked to its height so that Trees are always scaled uniformly. However, you can disable the Lock Width to Height option and specify the width separately.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Tree Width</strong></td>
+	<td style="text-align:left;">If the Tree’s width is not locked to its height you can control the Tree’s minimal width and maximal width using a slider. Drag the slider to the left for thin Trees, and right for wide Trees. If you uncheck Random, you can specify the exact scale for the width of all newly painted Trees within the range of 0.01 to 2.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Random Tree Rotation</strong></td>
+	<td style="text-align:left;">Random Tree Rotation is a variation option used to help create the impression of a random, natural-looking forest rather than an artificial plantation of identical Trees. Untick this if you want to place Trees with fixed, identical rotations.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lighting</strong></td>
+	<td style="text-align:left;"></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lightmap Static</strong></td>
+	<td style="text-align:left;">Enable this check box to indicate to Unity that the GameObject’s location is fixed and it will participate in Global Illumination computations. If a GameObject is not marked as Lightmap Static then it can still be lit using Light Probes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Scale In Lightmap</strong></td>
+	<td style="text-align:left;">Specifies the relative size of the GameObject’ UVs within a lightmap. A value of 0 will result in Unity not lightmapping the GameObject, but the GameObject will still contribute to the lighting of other GameObjects in the Scene. A value greater than 1.0 increases the number of pixels in the lightmap used for this GameObject. A value less than 1.0 decreases the number of pixels. You can use this property to optimise lightmaps so that important or detailed areas are more accurately lit. For example, an isolated building with flat, dark walls will use a low lightmap scale (less than 1.0), while a collection of colorful motorcycles displayed close together need a high scale value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Lightmap Parameters</strong></td>
+	<td style="text-align:left;">Allows you to choose or create a set of Lightmap Parameters for this GameObject.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Creating Trees</h2>
+
+<p>If you want to create your own Trees, you can use the <a href="https://store.speedTree.com/unity/">SpeedTree Modeler</a>, Unity’s Tree Creator tool, or any 3D modelling application, and then import them into your Project.</p>
+
+<p>You can use <a href="https://store.speedTree.com/unity/">SpeedTree Modeler</a> (from IDV, Inc.) to create Trees with advanced visual effects such as smooth LOD transition, fast billboarding and natural wind animation. For more detailed information, refer to the <a href="http://docs8.speedTree.com/">SpeedTree Modeler documentation</a>. You can also import SpeedTree assets into your Project folder from Asset Store packages or other third party sources. </p>
+
+<p>Unity has its own <a href="class-Tree.html">Tree creator</a> that you can use to produce new Tree assets. You can also use a 3D modelling application. </p>
+
+<p>When creating Trees, position the anchor point at the base of the Tree where it emerges from the ground. For performance reasons, your Tree mesh should have fewer than 2000 triangles. and The mesh always has exactly two materials: one for the Tree body and the other for the leaves.</p>
+
+<p>Trees must use the <strong>Nature/Soft Occlusion Leaves</strong> and <strong>Nature/Soft Occlusion Bark</strong> shader. To use those shaders, you have to place Trees in a specific folder named <strong>Ambient-Occlusion</strong>, or the Trees won’t render correctly. When you place a model in such a folder and reimport it, Unity will calculate soft ambient occlusion in a way that is specifically designed for Trees.</p>
+
+<p>If you change an imported Tree asset in a 3D modelling application, you will need to click the <strong>Refresh</strong> button in the Editor in order to see the updated Trees on your Terrain: <img src="../uploads/Main/TerrainTreesRefresh.png" alt="Refresh buton location"></p>
+
+<p><strong>Warning</strong> When importing and altering a SpeedTree model in a 3D modeling program, when you re-export it (as an .fbx or .obj) you may lose the natural wind animation functionality that comes with SpeedTree models.</p>
+
+<h2>Using Colliders with Trees</h2>
+
+<p>You can add a Capsule Collider to a new Tree asset by instantiating the Tree in the scene by dragging the Prefab from your Assets folder into the Scene. Then add the collider using menu: <strong>Component</strong> &gt; <strong>Physics</strong> &gt; <strong>Capsule Collider</strong>. You can then <strong>either</strong>:</p>
+
+<ul>
+<li><p>Override the original prefab by clicking the <strong>Apply</strong> button on the Tree GameObject in the Inspector Window:
+<img src="../uploads/Main/TerrainTreesUsingCollidersWithTrees.png" alt=""></p></li>
+<li><p>Or, create a new Prefab by dragging the Tree GameObject into your Assets folder.</p></li>
+</ul>
+
+<p>When you add the Tree to the Terrain for painting, make sure that if you have created a new Prefab that you select the correct one with with the collider rather than the original GameObject. You must also enable <strong>Create Tree Colliders</strong> in the Terrain’s Terrain Collider component inspector if you want to make .</p>
+
+<h2>Making Trees bend in the wind</h2>
+
+<p>You first need to create a <strong>Wind Zone</strong> to make Trees react to the wind. To do this select <strong>GameObject</strong> &gt; <strong>3D Object</strong> &gt; <strong>Wind Zone</strong>.</p>
+
+<p>At this point, make sure that your Trees are set to bend. Select your <strong>Terrain</strong>, click the <strong>Place Trees</strong> button in the <strong>Inspector</strong>, and then select <strong>Edit Trees &gt; Edit Tree</strong>. Setting the <strong>Bend Factor</strong> to 1 will cause the Trees to adjust if you have not already done this.</p>
+
+<p>With the default settings, your Trees will move quite violently. To fix this, change your bend value in each individual Tree type. This is useful if you want some Tree types to bend more than others. To change the bend effect in the entire <strong>Wind Zone</strong>, set the values in the <strong>Wind Zone</strong> component directly. To reduce the fluttering effect of the leaves, adjust the wind turbulence down to around 0.1 to 0.3, and everything will become much smoother. If you don’t want the Trees blowing all the way to one side and instead want some variation, set the <strong>Wind Main</strong> value down to the same value as your turbulence.</p>
+
+<h2>Tree Level of Detail (LOD) transition zone</h2>
+
+<p>Unity’s LOD system uses a 2D to 3D transition zone to blend 2D billboards with 3D tree models seamlessly. This prevents any sudden popping of 2D and 3D trees, which is vital in VR. For more information about configuring LOD components, see the (LOD)[LevelOfDetail] and (LOD Group)[class-LODGroup] manual pages.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2018–09–20 Page amended with <a href="DocumentationEditorialReview.html">editorial review</a>
+</span></p></li>
+<li><p><span class="page-history">在 Unity 4.6 中更改了 GameObject 菜单</span></p></li>
+<li><p><span class="page-history">2D to 3D transition zone added to LOD system in Unity <a href="https://docs.unity3d.com/2017.3/Documentation/Manual/30_search.html?q=newin20173">2017.3</a> <span class="search-words">NewIn20173</span></span></p></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="terrain-Textures.html"></a></span><div class="tip">地形纹理</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SpeedTree.html"></a></span><div class="tip">SpeedTree</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2017.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>

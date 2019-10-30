@@ -1,0 +1,252 @@
+<!DOCTYPE html><html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Importing Assets - Unity Manual">
+<title>Importing Assets - Unity Manual</title>
+<meta property="og:image" content="https://docs.unity3d.com/zh_CN/2017.4/uploads/Main/ProjectFileStructure.png">
+<meta name="description" content="Assets created outside of Unity must be brought in to Unity by having the file either saved directly into the &amp;#8220;Assets&amp;#8221; folder of your project, or copied into that folder. For many common formats, you can save your source file directly into your project&amp;#8217;s Assets folder and Unity will be able to read it. Unity will notice when you save new changes to the file and will re-import as necessary.">
+<meta property="og:description" content="Assets created outside of Unity must be brought in to Unity by having the file either saved directly into the &amp;#8220;Assets&amp;#8221; folder of your project, or copied into that folder. For many common formats, you can save your source file directly into your project&amp;#8217;s Assets folder and Unity will be able to read it. Unity will notice when you save new changes to the file and will re-import as necessary.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="../StaticFiles/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'zh_CN';
+      var page = 'ImportingAssets';
+      if(!page) page = 'index';
+      var version = '2017.4';
+      var docs_versions = [{version: '2019.1',version_string: '2019.1'},{version: '2018.4',version_string: '2018.4'},{version: '2018.3',version_string: '2018.3'},{version: '2018.2',version_string: '2018.2'},{version: '2018.1',version_string: '2018.1'},{version: '2017.4',version_string: '2017.4'},{version: '2017.3',version_string: '2017.3'},{version: '2017.2',version_string: '2017.2'},{version: '2017.1',version_string: '2017.1'},{version: '5.6',version_string: '560'},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2017.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ImportingAssets.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ImportingAssets.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ImportingAssets.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ImportingAssets.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ImportingAssets.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ImportingAssets.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ImportingAssets.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ImportingAssets.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ImportingAssets.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ImportingAssets.html">5.6</a></li>
+</ul></div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">Scripting API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2017.4/Documentation/Manual/ImportingAssets.html">English</a></li>
+<li><a data-lang="ja" href="/ja/2017.4/Manual/ImportingAssets.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2017.4/Manual/ImportingAssets.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2017.4/Manual/ImportingAssets.html">한국어</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>Manual</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2017.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;"><ul>
+<li><a class="docs_version_url_2019.1" href="/zh_CN/2019.1/Manual/ImportingAssets.html">2019.1</a></li>
+<li><a class="docs_version_url_2018.4" href="/zh_CN/2018.4/Manual/ImportingAssets.html">2018.4</a></li>
+<li><a class="docs_version_url_2018.3" href="/zh_CN/2018.3/Manual/ImportingAssets.html">2018.3</a></li>
+<li><a class="docs_version_url_2018.2" href="/zh_CN/2018.2/Manual/ImportingAssets.html">2018.2</a></li>
+<li><a class="docs_version_url_2018.1" href="/zh_CN/2018.1/Manual/ImportingAssets.html">2018.1</a></li>
+<li><a class="docs_version_url_2017.4" href="/zh_CN/2017.4/Manual/ImportingAssets.html">2017.4</a></li>
+<li><a class="docs_version_url_2017.3" href="/zh_CN/2017.3/Manual/ImportingAssets.html">2017.3</a></li>
+<li><a class="docs_version_url_2017.2" href="/zh_CN/2017.2/Manual/ImportingAssets.html">2017.2</a></li>
+<li><a class="docs_version_url_2017.1" href="/zh_CN/2017.1/Manual/ImportingAssets.html">2017.1</a></li>
+<li><a class="docs_version_url_560" href="/zh_CN/560/Manual/ImportingAssets.html">5.6</a></li>
+</ul></div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity User Manual (2017.4)</a></li>
+<li><a href="UnityOverview.html">在 Unity 中操作</a></li>
+<li><a href="AssetWorkflow.html">资源工作流程</a></li>
+<li>Importing Assets</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PrimitiveObjects.html"></a></span><div class="tip">Primitive and Placeholder Objects</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ImportSettings.html"></a></span><div class="tip">Import Settings</div>
+</div>
+</div></div>
+<h1>Importing Assets</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Assets created outside of Unity must be brought in to Unity by having the file either saved directly into the “Assets” folder of your project, or copied into that folder. For many common formats, you can save your source file directly into your project’s Assets folder and Unity will be able to read it. Unity will notice when you save new changes to the file and will re-import as necessary.</p>
+
+<p>When you create a Unity Project, you are creating a folder - named after your project - which contains the following subfolders:</p>
+
+<figure>
+<img src="../uploads/Main/ProjectFileStructure.png" alt="Unity 项目的基本文件结构">
+<figcaption>Unity 项目的基本文件结构</figcaption>
+</figure>
+
+<p>The <strong>Assets</strong> folder is where you should save or copy files that you want to use in your project.</p>
+
+<p>The contents of the <strong>Project Window</strong> in Unity shows the items in your Assets folder. So if you save or copy a file to your Assets folder, it will be imported and become visible in your Project Window.</p>
+
+<p>Unity will automatically detect files as they are added to <strong>Assets</strong> folder, or if they are modified. When you put any asset into your Assets folder, you will see the asset appear in your <strong>Project View</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/ProjectBrowser.png" alt="The Project Window shows assets that have been imported into your project">
+<figcaption>The Project Window shows assets that have been imported into your project</figcaption>
+</figure>
+
+<p>If you drag a file into Unity’s Project Window from your computer (eg, from the Finder on Mac, or from Explorer on Windows), it will be <em>copied</em> into your Assets folder, and will appear in the Project window.</p>
+
+<p>The items you see in your Project window represent (in most cases) actual files on your computer, and if you delete them within Unity, you are deleting them from your computer too.</p>
+
+<figure>
+<img src="../uploads/Main/AssetWorkflowFolderAndProjectWindow.png" alt="计算机上 Unity 项目中的 Assets 文件夹与 Unity 中的 Project 窗口之间的关系">
+<figcaption>计算机上 Unity 项目中的 Assets 文件夹与 Unity 中的 Project 窗口之间的关系</figcaption>
+</figure>
+
+<p>The above image shows an example of a few files and folders inside the Assets folder of a Unity project. You can create as many folders as you like and use them to organise your Assets.</p>
+
+<p>You’ll notice in the image above that there are <strong>.meta</strong> files listed in the file system, but not visible in Unity’s Project Window. Unity creates these .meta files for each asset and folder, but they are <a href="https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory">hidden</a> by default, so you may not see them in your Explorer/Finder either.</p>
+
+<p>They contain important information about how the asset is used in the project and they must stay with the asset file they relate to, so if you move or rename an asset file in Explorer/Finder, you must also move/rename the meta file to match. </p>
+
+<p>The simplest way to safely move or rename your assets is to always do it from within Unity’s project folder. This way, Unity will automatically move or rename the corresponding meta file. If you like, you can read more about .meta files and what goes on <a href="BehindtheScenes.html">behind-the-scenes during the import process</a>.</p>
+
+<p>If you want to bring collections of assets into your project, you can use <strong>Asset Packages</strong>. See <a href="AssetPackages.html">Asset Packages</a> for more details.</p>
+
+<hr>
+
+<h2>Some common types of Asset</h2>
+
+<h3>Image Files</h3>
+
+<p>Most common image file types are supported, such as BMP, TIF, TGA, JPG, and PSD. If you save your layered Photoshop (.psd) files into your Assets folder, they will be imported as flattened images. You can find out more about <a href="HOWTO-alphamaps.html">importing images with alpha channels from photoshop</a>, or <a href="SpriteEditor.html">importing your images as sprites</a></p>
+
+<h3>3D Model Files</h3>
+
+<p>If you save your 3D files from most common 3D software packages in their native format (eg, .max, .blend, .mb, .ma) into your Assets folder, they will be imported by calling back to your 3D package’s FBX export plugin (*). Alternatively you can export as FBX from your 3D app into your Unity project. Read more about <a href="HOWTO-importObject.html">importing 3D files from your 3D app</a>.</p>
+
+<h3>Meshes &amp; Animations</h3>
+
+<p>Whichever 3D package you are using, Unity will import the meshes and animations from each file. For a list of applications that are supported by Unity, please see <a href="HOWTO-importObject.html">this page</a>.</p>
+
+<p>Your mesh file does not need to have an animation to be imported. If you do use animations, you have your choice of importing all animations from a single file, or importing separate files, each with one animation. For more information about importing animations, please see <a href="AnimationsImport.html">Importing animations</a>.</p>
+
+<h3>Audio Files</h3>
+
+<p>If you save uncompressed audio files into your Assets folder, they will be imported according to the compression settings specified. Read more about <a href="AudioFiles.html">importing audio files</a>.</p>
+
+<h3>Other Asset Types</h3>
+
+<p>In all cases, your original source file is never modified by Unity, even though within Unity you can often choose between various ways to compress, modify, or otherwise process the asset. The import process reads your source file, and creates a game-ready representation of your asset internally, matching your chosen import settings. If you modify the import settings for an asset, or make a change to the source file in the Asset folder, will cause Unity to re-import the asset again to reflect your new changes.</p>
+
+<p><strong>Note</strong>: <em>Importing native 3D formats requires the 3D application to be installed on the same computer as Unity. This is because Unity uses the 3D application’s FBX exporter plug-in to read the file. Alternatively, you can directly export as FBX from your application and save into the Projects folder.</em></p>
+
+<p>另请参阅：</p>
+
+<ul>
+<li><a href="AssetPackages.html">Asset Packages</a></li>
+<li><a href="class-FBXImporter.html">Importing Meshes</a></li>
+<li><a href="3D-formats.html">3D formats</a></li>
+<li><a href="AnimationsImport.html">Animation Import</a></li>
+<li><a href="Materials.html">材质和着色器</a></li>
+<li><a href="Textures.html">纹理和视频</a></li>
+<li><a href="SpriteEditor.html">精灵编辑器 (Sprite Editor)</a></li>
+<li><a href="SpritePacker.html">精灵打包器 (Sprite Packer)</a></li>
+<li><a href="ProceduralMaterials.html">Procedural Materials</a></li>
+<li><a href="AudioFiles.html">音频文件</a></li>
+<li><a href="TrackerModules.html">音轨模块</a></li>
+</ul>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PrimitiveObjects.html"></a></span><div class="tip">Primitive and Placeholder Objects</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ImportSettings.html"></a></span><div class="tip">Import Settings</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">Copyright © 2018 Unity Technologies. Publication 2017.4</div>
+<div class="menu">
+<a href="https://unity3d.com/learn">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>
